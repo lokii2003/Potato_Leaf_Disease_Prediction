@@ -1,0 +1,1 @@
+print("Potato Leaf Disease Prediction App is running!")
