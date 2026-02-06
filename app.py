@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 # Load trained model
-model = tf.keras.models.load_model("potato_model1.keras")
+model = tf.keras.models.load_model("best_leaf_model.keras")
 
 
 
@@ -46,7 +46,7 @@ def index():
             file.save(img_path)
 
 
-            img = image.load_img(img_path, target_size=(224,224))
+            img = image.load_img(img_path, target_size=(256,256))
             img = image.img_to_array(img)
             img = img / 255.0
             img = np.expand_dims(img, axis=0)
